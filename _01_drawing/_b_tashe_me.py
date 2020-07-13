@@ -6,7 +6,7 @@ def setBackground(filename):
     try:
         image = Image.open(filename)
     except:
-        print( "ERROR: Unable to find file " + filename )
+        print( "ERROR: Unable to find file " + filename)
         return
     
     window.setup(image.width, image.height, startx=0, starty=0)
@@ -41,10 +41,13 @@ if __name__ == '__main__':
     
     # 2. Call the setBackground() function with the image filename inside of the parenthesis
     # setBackground('emoji.png')
-    
+    setBackground('emoji.png')
     # 3. Create a variable called moustache and set it equal to addMoustache('moustache1.gif')
     # moustache = addMoustache('moustache1.gif')
 
 # ===================== DO NOT EDIT THE CODE BELOW ============================
     window.onclick(screenClicked)
+    
+    moustache = addMoustache('moustache1.gif')
+    
     turtle.done()
