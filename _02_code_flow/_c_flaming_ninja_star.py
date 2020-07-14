@@ -19,11 +19,12 @@ if __name__ == '__main__':
     flameSize = 130;        # the length of the flaming arms
     
     # Make a new turtle
-    
+    import turtle
     # Make the turtle shape 'turtle', .shape('turtle')
-    
+    jim=turtle.Turtle
+    jim.shape('turtle')
     # Set the turtle width to 2
-    
+    jim.width(2)
     # Set the turtle speed to 0 (fastest)
     
     # Use a for loop to repeat all of the code below ONE time (we will change this later)
