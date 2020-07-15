@@ -38,7 +38,7 @@ if __name__ == '__main__':
     # If you need to, move them around to make your story look better in the pop-up
     
     # If you want to write your own Madlib story, just change the story variable and ask the player different questions.
-    messagebox.showinfo(None,'Piranhas are more'+Name1+ 'during the day, so cross the river at night. Piranhas are attracted to fresh'+Name2+ 'and will most likely take a bite out of your'+Name3+ 'if you'+Name4+'. Whatever you do, if you have an open wound, try to find another way to get back to the' +Name5+ 'Good luck!')
+    messagebox.showinfo(None,'Piranhas are more '+Name1+ ' during the day, so cross the river at night. Piranhas are attracted to fresh '+Name2+ ' and will most likely take a bite out of your '+Name3+ ' if you '+Name4+'. Whatever you do, if you have an open wound, try to find another way to get back to ' +Name5+ '. Good luck!')
 
     # Run the window's .mainloop() method
     window.mainloop()
