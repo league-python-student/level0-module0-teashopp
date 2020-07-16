@@ -1,25 +1,36 @@
-from tkinter import simpledialog, Tk 
-    
+from tkinter import simpledialog, messagebox, Tk 
+import random
+
 if __name__ == '__main__':
 
     window=Tk()
     window.withdraw()
     
-    v = (random.randint(1,100))
     
-    counter = 0
+    nm = (random.randint(1,100))
+    count = 0
     gameEnd = 0
     
-    guess1 = simpledialog.interger(title=None, prompt='What number am I thinking of?')
-    counter+=1
-
-    if guess1 == v:
-        gameEnd = 1
-    else:
-        if v>guess1:
-            messagebox.showinfo('Too Low! Try Again!')
+    
+    while gameEnd == 0:
+        
+        if count >= 10:
+            gameEnd = 2
+        guess1 = simpledialog.askinteger('I,m thinking of a number between 1 and 100.','What do you think it is?')
+        count += 1
+        
+        if guess1 == nm:
+            gameEnd = 1
+            messagebox.showinfo('Good job.', 'You,ve successfully guessed my number, '+ str(nm) +', in '+ str(count) +' attempts.')
+            exit()
+        
         else:
-            messagebox.showinfo('Too High! Try Again!')
-            
-    messagebox.showinfo('Perfect! The number I was thinking of was '+v)
+            if nm < guess1:
+                messagebox.showinfo('So close, but no cigar.', 'Aim a little lower, buckaroo.')
+            else:
+                messagebox.showinfo('So close, but no cigar.', 'Aim a little higher, sport.')          
+                   
+    messagebox.showinfo(None, 'Sorry, Buddy, but I was thinking of '+ str(nm) + '. Better luck next time.')
+        
+        
 window.mainloop()
